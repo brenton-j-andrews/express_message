@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+  <body>
+
+    <h1><%= title %></h1>
+
+    <p> This is the form page! </p>
+    
+    <form method="post" action="/new">
+        <label for="name"> Name: </label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="msg"> Message: </label><br>
+        <input type="text" id="message" name="message"><br><br>
+         
+        <input type="submit" value="Submit">
+    </form>
+
+    <a href="/"> Return to the main page. </a>
+  </body>
+
+</html>

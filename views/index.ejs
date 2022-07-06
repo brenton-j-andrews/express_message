@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
+
   <body>
+
     <h1><%= title %></h1>
-    <p>Hello mate, welcome to <%= title %></p>
+
+    <div class="msg-wrapper">
+      
+      <% messages.forEach(function(msg) { %>
+        <div class="message-unit">
+          <p class="user"> User: <%=msg.user %> </p>
+          <p class="msg"> Message: <%=msg.text %> </p>
+          <p class="date"> Date: <%=msg.added.toLocaleDateString("en-US") %> </p>
+        </div> 
+      <% }) %>
+
+    </div>
+    
+
+
+    <a href="/new"> Add a new message here! </a>
   </body>
+
 </html>
